@@ -16,49 +16,6 @@ Cement Mixure machine's IoT Data Pipeline is a project that processes IoT data f
 - Basic dashboards for data monitoring
 - Anomaly detection and predictive maintenance capabilities
 
-## Project Structure
-Cement Mixure machine-IoT-Data-Pipeline/
-│
-├── src/
-│ ├── ingestion/
-│ │ ├── init.py
-│ │ ├── sensor_connector.py
-│ │ └── data_ingestion.py
-│ ├── transformation/
-│ │ ├── init.py
-│ │ ├── data_cleaner.py
-│ │ ├── data_normalizer.py
-│ │ └── data_enricher.py
-│ ├── loading/
-│ │ ├── init.py
-│ │ ├── data_loader.py
-│ │ └── target_model.py
-│ ├── pipeline/
-│ │ ├── init.py
-│ │ ├── etl_pipeline.py
-│ │ └── pipeline_monitor.py
-│ └── utils/
-│ ├── init.py
-│ ├── config.py
-│ └── logger.py
-│
-├── tests/
-│ ├── test_ingestion.py
-│ ├── test_transformation.py
-│ ├── test_loading.py
-│ └── test_pipeline.py
-│
-├── notebooks/
-│ ├── data_exploration.ipynb
-│ └── model_development.ipynb
-│
-├── config/
-│ └── config.yaml
-│
-├── requirements.txt
-├── setup.py
-├── .gitignore
-└── README.md
 
 ## Installation
 
