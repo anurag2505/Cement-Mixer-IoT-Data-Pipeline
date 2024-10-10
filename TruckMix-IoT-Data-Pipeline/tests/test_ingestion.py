@@ -1,6 +1,6 @@
 import pytest
 
-from ingestion_module import ingest_data  # Replace with your actual module and function
+from src.ingestion.data_ingestion import ingest_data  # Adjust the import path based on your project structure
 
 @pytest.fixture
 def sample_data():

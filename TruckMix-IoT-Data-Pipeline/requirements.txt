@@ -9,3 +9,4 @@ matplotlib
 seaborn
 paho-mqtt
 serial
+pytest
