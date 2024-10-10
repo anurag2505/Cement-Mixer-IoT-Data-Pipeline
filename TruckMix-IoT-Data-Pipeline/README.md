@@ -15,17 +15,14 @@
 1. Clone the repository:
 
 git clone https://github.com/anurag2505/Cement-Mixer-IoT-Data-Pipeline.git
-text
 
 2. Navigate to the project directory:
 
 cd TruckMix-IoT-Data-Pipeline
-text
 
 3. Create a virtual environment:
 
 python -m venv venv
-text
 
 4. Activate the virtual environment:
 - On Windows: `venv\Scripts\activate`
@@ -33,18 +30,11 @@ text
 
 5. Install the required packages:
 
-pip install -r requirements.txt
-text
+- pip install -r requirements.txt
 
 ## Usage
 
 1. Configure the project settings in `config/config.yaml`
-2. Run the ETL pipeline:
+2. Run the ETL pipeline: python src/pipeline/etl_pipeline.py
+3. Monitor the pipeline: python src/pipeline/pipeline_monitor.py
 
-python src/pipeline/etl_pipeline.py
-text
-
-3. Monitor the pipeline:
-
-python src/pipeline/pipeline_monitor.py
-text
