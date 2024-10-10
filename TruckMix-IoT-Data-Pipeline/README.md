@@ -12,25 +12,17 @@
 
 ## Installation
 
-1. Clone the repository:
+1. Clone the repository: git clone https://github.com/anurag2505/Cement-Mixer-IoT-Data-Pipeline.git
 
-git clone https://github.com/anurag2505/Cement-Mixer-IoT-Data-Pipeline.git
+2. Navigate to the project directory: cd TruckMix-IoT-Data-Pipeline
 
-2. Navigate to the project directory:
-
-cd TruckMix-IoT-Data-Pipeline
-
-3. Create a virtual environment:
-
-python -m venv venv
+3. Create a virtual environment: python -m venv venv
 
 4. Activate the virtual environment:
 - On Windows: `venv\Scripts\activate`
 - On macOS and Linux: `source venv/bin/activate`
 
-5. Install the required packages:
-
-- pip install -r requirements.txt
+5. Install the required packages: pip install -r requirements.txt
 
 ## Usage
 
