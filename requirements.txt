@@ -10,3 +10,4 @@ seaborn
 paho-mqtt
 serial
 pytest
+ipykernel 
