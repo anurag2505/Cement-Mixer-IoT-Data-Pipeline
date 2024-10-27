@@ -1,4 +1,6 @@
 import pandas as pd
+from transformation import DataCleaner
+from transformation import DataTransformer
 import sqlalchemy
 
 class ETLPipeline:
@@ -35,7 +37,7 @@ def example_transform(data):
     return data
 
 if __name__ == "__main__":
-    source = 'path/to/source.csv'
+    source = 'TruckMix-IoT-Data-Pipeline/Data'
     destination = 'sqlite:///path/to/destination.db'
     pipeline = ETLPipeline(source, destination, example_transform)
     pipeline.run()

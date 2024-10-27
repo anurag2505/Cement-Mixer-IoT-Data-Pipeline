@@ -1,37 +1,58 @@
+
 import pandas as pd
-import json
+import os
 
-class DataLoader:
-    def __init__(self, source):
-        self.source = source
+def load_csv_files():
+    """
+    Reads 5 CSV files from the Data folder
+    Returns a list of DataFrames containing the data from each CSV file
+    """
+    data_folder = "TruckMix-IoT-Data-Pipeline/Data"
+    dataframes = []
+    
+    try:
+        # Get list of CSV files in the Data folder
+        csv_files = [f for f in os.listdir(data_folder) if f.endswith('.csv')]
+        
+        # Read first 5 CSV files
+        for file in csv_files[:5]:
+            file_path = os.path.join(data_folder, file)
+            df = pd.read_csv(file_path)
+            dataframes.append(df)
+            
+        return dataframes
+    
+    except Exception as e:
+        print(f"Error loading CSV files: {str(e)}")
+        return None
 
-    def load_data(self):
-        """
-        Load data from the source.
-        This method should be implemented to load data from the specified source.
-        """
-        raise NotImplementedError("This method needs to be implemented by subclasses.")
 
-class CSVDataLoader(DataLoader):
-    def load_data(self):
-        try:
-            data = pd.read_csv(self.source)
-            return data
-        except Exception as e:
-            print(f"Error loading data from {self.source}: {e}")
-            return None
+def display_data(dataframes):
+    """
+    Displays the data from each DataFrame in the list
+    Args:
+        dataframes: List of pandas DataFrames to display
+    """
+    try:
+        if dataframes is None or len(dataframes) == 0:
+            print("No data to display")
+            return
+            
+        for i, df in enumerate(dataframes):
+            print(f"\nDataset {i+1}:")
+            print("Shape:", df.shape)
+            print("\nFirst 5 rows:")
+            print(df.head())
+            print("\nDataset Info:")
+            print(df.info())
+            print("\n" + "="*50)
+            
+    except Exception as e:
+        print(f"Error displaying data: {str(e)}")
 
-class JSONDataLoader(DataLoader):
-    def load_data(self):
-        try:
-            with open(self.source, 'r') as file:
-                data = json.load(file)
-            return data
-        except Exception as e:
-            print(f"Error loading data from {self.source}: {e}")
-            return None
 
-# Example usage:
-# csv_loader = CSVDataLoader('path/to/csvfile.csv')
-# data = csv_loader.load_data()
-# print(data)
+# Load the CSV files
+dataframes = load_csv_files()
+
+# Display the data
+display_data(dataframes)

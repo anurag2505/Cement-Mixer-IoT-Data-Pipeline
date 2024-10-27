@@ -1,0 +1,12 @@
+pandas
+numpy
+requests
+flask
+sqlalchemy
+pymysql
+scikit-learn
+matplotlib
+seaborn
+paho-mqtt
+serial
+pytest

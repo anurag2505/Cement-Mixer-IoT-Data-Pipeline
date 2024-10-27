@@ -28,6 +28,6 @@ class DataCleaner:
         return self.data
 
 # Example usage:
-# df = pd.read_csv('your_data.csv')
+df = pd.read_csv('your_data.csv')
 # cleaner = DataCleaner(df)
 # clean_df = cleaner.remove_duplicates().fill_missing_values().remove_outliers().get_clean_data()
